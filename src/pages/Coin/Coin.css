@@ -1,0 +1,94 @@
+.coin {
+  max-width: 1100px;
+  margin: 44px auto;
+  padding: 22px;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 16px;
+  color: #fff;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+  font-family: "Inter", system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif;
+  backdrop-filter: blur(6px);
+}
+
+.coin-name {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 18px;
+}
+
+.coin-name img {
+  width: 56px;
+  height: 56px;
+  object-fit: contain;
+  border-radius: 50%;
+  background: rgba(0,0,0,0.35);
+  padding: 6px;
+  filter: drop-shadow(0 4px 10px rgba(0,0,0,0.4));
+}
+
+.coin-chart {
+  background: rgba(255,255,255,0.06);
+  padding: 18px;
+  border-radius: 14px;
+  margin: 18px 0 22px;
+  border: 1px solid rgba(255,255,255,0.08);
+}
+
+.coin-info {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 14px;
+  margin-top: 18px;
+}
+
+.coin-info ul {
+  list-style: none;
+  padding: 14px 16px;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 12px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.98rem;
+  transition: transform 0.18s ease, background 0.18s ease;
+}
+
+.coin-info ul:hover {
+  background: rgba(255,255,255,0.08);
+  transform: translateY(-1px);
+}
+
+.coin-info ul li:first-child {
+  color: #b9c5ff;
+}
+
+.coin-info ul li:last-child {
+  font-weight: 800;
+  color: #76e0a3;
+}
+
+.spinner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 400px;
+}
+
+.spin {
+  width: 60px;
+  height: 60px;
+  border: 6px solid rgba(255,255,255,0.18);
+  border-top: 6px solid #7b2ff7;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}

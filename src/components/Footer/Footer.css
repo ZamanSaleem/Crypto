@@ -1,0 +1,50 @@
+.footer {
+  background:
+    linear-gradient(180deg, rgba(3, 24, 27, 0), rgba(3, 24, 27, 0.4) 20%, rgba(3, 24, 27, 0.85) 60%),
+    radial-gradient(600px 200px at 50% -40%, rgba(55,224,255,0.25), rgba(55,224,255,0) 70%);
+  color: #fff;
+  padding: 28px 0 34px;
+  margin-top: 56px;
+  text-align: center;
+  border-top: 1px solid rgba(255,255,255,0.08);
+}
+
+.footer-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.footer-logo {
+  font-size: 22px;
+  font-weight: 900;
+  margin-bottom: 12px;
+  background: linear-gradient(90deg, #37e0ff, #48f3c2);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.footer-text {
+  font-size: 14px;
+  color: #cfd8ff;
+  margin-bottom: 10px;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.footer-links a {
+  color: #fff;
+  font-size: 14px;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #00bcd4;
+}
