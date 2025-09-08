@@ -1,10 +1,12 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./Home.css";
-import { CoinContext } from "../../context/CoinContext";
 import { Link } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { fetchallcoin } from "../../store/marketSlice";
 
 export default function HomePage() {
-  const { allCoin, currency } = useContext(CoinContext);
+  const dispatch = useDispatch();
+  const { allCoin, currency } = useSelector((state) => state.coin);
   const [displayCoin, setDisplayCoin] = useState([]);
   const [input, setInput] = useState('')
 
@@ -22,6 +24,10 @@ export default function HomePage() {
     })
     setDisplayCoin(coins)
   }
+
+  useEffect(() => {
+    dispatch(fetchallcoin(currency));
+  }, [dispatch, currency]);
 
   useEffect(() => {
     setDisplayCoin(allCoin);

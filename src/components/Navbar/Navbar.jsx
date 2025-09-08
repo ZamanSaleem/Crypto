@@ -1,29 +1,29 @@
-import React, { useContext } from 'react'
+import React from 'react'
 import "./Navbar.css"
 import arrow_icon from "../../assets/arrow_icon.png"
-import { CoinContext } from '../../context/CoinContext'
 import { Link } from 'react-router-dom'
+import { useDispatch } from 'react-redux'
+import { setCurrency } from '../../store/marketSlice'
 
 export default function Navbar() {
-
-  const { setCurrency } = useContext(CoinContext)
+  const dispatch = useDispatch()
 
   const currencyHandler = (event) => {
     switch (event.target.value) {
       case "usd": {
-        setCurrency({ name: "usd", symbol: "$" });
+        dispatch(setCurrency({ name: "usd", symbol: "$" }));
         break
       }
       case "inr": {
-        setCurrency({ name: "inr", symbol: "₹" });
+        dispatch(setCurrency({ name: "inr", symbol: "₹" }));
         break
       }
       case "eur": {
-        setCurrency({ name: "eur", symbol: "€" });
+        dispatch(setCurrency({ name: "eur", symbol: "€" }));
         break
       }
       default: {
-        setCurrency({ name: "usd", symbol: "$" });
+        dispatch(setCurrency({ name: "usd", symbol: "$" }));
         break
       }
     }

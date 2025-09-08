@@ -1,14 +1,14 @@
-import React, { useContext, useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import "./Coin.css"
 import { useParams } from 'react-router-dom'
-import { CoinContext } from '../../context/CoinContext'
 import LineChart from '../../components/LineChart/LineChart'
+import { useSelector } from 'react-redux'
 
 const Coin = () => {
   const { coinId } = useParams()
   const [coinData, setCoinData] = useState()
   const [historicalData, setHistoricalData] = useState()
-  const { currency } = useContext(CoinContext)
+  const { currency } = useSelector((state) => state.coin)
 
   const fetchCoinData = () => {
     const options = {
